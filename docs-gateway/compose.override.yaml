@@ -1,0 +1,4 @@
+services:
+  gateway:
+    volumes:
+      - ./secrets/context7_api_key:/run/secrets/context7_api_key:ro
