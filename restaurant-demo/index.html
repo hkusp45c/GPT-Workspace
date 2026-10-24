@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#17191c">
+<title>Little Plate | Private Restaurant Demo</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#f3f1eb;background:#111318}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}.workspace{display:grid;grid-template-columns:340px minmax(0,1fr);min-height:100vh}.panel{padding:27px 24px;background:#191c23;border-right:1px solid #323844}.brand{font-size:12px;font-weight:800;letter-spacing:.14em;color:#eabf79}.panel h1{font-size:24px;margin:9px 0 4px}.muted{color:#aeb5c0;font-size:13px;line-height:1.55}.panel label{display:block;font-size:12px;font-weight:700;margin:21px 0 7px;color:#cfd6de}input,select{display:block;width:100%;background:#252a34;color:white;border:1px solid #434b59;border-radius:9px;padding:11px 12px}input:focus,select:focus{outline:2px solid #cfa46b;outline-offset:2px}.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.choice{border:1px solid #444b56;border-radius:9px;background:#252a34;color:#fff;padding:12px 3px;font-size:12px}.choice[aria-pressed=true]{border-color:#eac18a;box-shadow:0 0 0 1px #eac18a}.publish{width:100%;padding:13px;margin-top:23px;border:0;background:#e5b77b;color:#20150d;font-weight:800;border-radius:9px}.preview-side{padding:20px;display:flex;flex-direction:column;gap:12px;background:#121419}.preview-top{display:flex;align-items:center;justify-content:space-between;color:#b9c1cd;font-size:12px}.preview-tag{font-weight:700;letter-spacing:.06em}.site{flex:1;border-radius:16px;overflow:hidden;background:var(--bg);color:var(--ink);box-shadow:0 16px 50px #0008;--bg:#fcf6eb;--ink:#38261c;--accent:#af643b;--surface:#f1e3cf}.site[data-theme=modern]{--bg:#e5efed;--ink:#173a34;--accent:#177765;--surface:#c6ddd7}.site[data-theme=midnight]{--bg:#1b2030;--ink:#f5e9d5;--accent:#e4af65;--surface:#2b3449}.site-head{display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,5vw,80px);border-bottom:1px solid color-mix(in srgb,var(--ink) 16%,transparent);gap:12px}.site-head strong{letter-spacing:.04em}.site-head a,.detail a{color:var(--accent);text-decoration:none;font-weight:700}.site-head nav{display:flex;gap:20px;font-size:13px}.hero{padding:clamp(36px,7vw,90px) 22px;text-align:center;background:radial-gradient(ellipse at top,color-mix(in srgb,var(--accent) 13%,transparent),transparent 60%)}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-size:12px;font-weight:800}.hero h2{font:700 clamp(38px,6vw,82px)/1.08 Georgia,serif;margin:15px 0}.hero p{max-width:610px;margin:0 auto 27px;line-height:1.7;opacity:.78}.cta{display:inline-block;background:var(--accent);color:var(--bg);padding:13px 22px;text-decoration:none;border-radius:4px;font-weight:800}.content{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;padding:36px clamp(18px,5vw,80px) 70px}.tile{border-radius:12px;background:var(--surface);padding:25px}.tile h3{font:700 25px Georgia,serif;margin:0 0 12px}.tile p{line-height:1.65;margin:5px 0}.menu-list{list-style:none;margin:0;padding:0}.menu-list li{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,transparent);padding:13px 0}.menu-list span:last-child{font-weight:800;white-space:nowrap}.detail{display:grid;gap:18px}.small{font-size:12px;opacity:.7}.notice{margin-top:15px;font-size:12px;line-height:1.5;color:#b9c1cd}.site-footer{text-align:center;padding:14px;font-size:11px;background:var(--surface);opacity:.85}@media(max-width:850px){.workspace{grid-template-columns:1fr}.panel{border-right:0;border-bottom:1px solid #323844}.content{grid-template-columns:1fr}.preview-side{padding:10px}.site-head nav{gap:10px}.site-head{padding:18px}.themes{max-width:430px}}
+</style>
+</head>
+<body>
+<main class="workspace">
+  <aside class="panel">
+    <div class="brand">PAPASMURF · DEMO LAB</div>
+    <h1>Restaurant Studio</h1>
+    <p class="muted">An actual, interactive prototype. Change the fields and choose a look. Everything stays in this browser until you download the configuration.</p>
+    <label for="name">Restaurant name</label><input id="name" maxlength="65" value="The Little Plate">
+    <label for="cuisine">Cuisine / tagline</label><input id="cuisine" maxlength="95" value="Neighborhood kitchen · Fresh every day">
+    <label for="description">Short description</label><input id="description" maxlength="210" value="Simple food, generous portions, and a good reason to come back tomorrow.">
+    <label for="phone">Phone</label><input id="phone" maxlength="35" value="(956) 555-0100">
+    <label for="address">Address</label><input id="address" maxlength="125" value="123 Example Street, Edinburg, TX">
+    <label for="hours">Hours</label><input id="hours" maxlength="100" value="Mon–Sat 11 AM–9 PM · Sun Closed">
+    <label>Choose a look</label>
+    <div class="themes" role="group" aria-label="Site theme">
+      <button class="choice" data-choice="rustic" aria-pressed="true">Rustic</button>
+      <button class="choice" data-choice="modern" aria-pressed="false">Modern</button>
+      <button class="choice" data-choice="midnight" aria-pressed="false">Midnight</button>
+    </div>
+    <button class="publish" id="download">Download site settings ↓</button>
+    <p class="notice">Prototype only: this saves a JSON file; it does not publish anything or accept uploads. All example information is fictional.</p>
+  </aside>
+  <section class="preview-side">
+    <div class="preview-top"><span class="preview-tag">LIVE CUSTOMER PREVIEW</span><span>Private demo · not indexed</span></div>
+    <article class="site" id="site" data-theme="rustic">
+      <header class="site-head"><strong id="navname">THE LITTLE PLATE</strong><nav><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></header>
+      <section class="hero"><div class="eyebrow" id="displaycuisine">NEIGHBORHOOD KITCHEN · FRESH EVERY DAY</div><h2 id="displayname">The Little Plate</h2><p id="displaydescription">Simple food, generous portions, and a good reason to come back tomorrow.</p><a class="cta" href="#menu">Explore the menu</a></section>
+      <div class="content"><section class="tile" id="menu"><h3>From our kitchen</h3><p class="small">Sample menu for demonstration purposes</p><ul class="menu-list"><li><span>House Specialty</span><span>$12</span></li><li><span>Fresh Daily Plate</span><span>$10</span></li><li><span>Something Sweet</span><span>$6</span></li></ul></section><section class="tile detail" id="visit"><div><h3>Come on in</h3><p id="displayaddress">123 Example Street, Edinburg, TX</p><a id="maps" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Edinburg%20TX">Directions ↗</a></div><div><strong>Hours</strong><p id="displayhours">Mon–Sat 11 AM–9 PM · Sun Closed</p></div><div><strong>Call us</strong><p><a id="phoneLink" href="tel:+19565550100"><span id="displayphone">(956) 555-0100</span></a></p></div></section></div>
+      <footer class="site-footer">Demonstration only · Fictional restaurant and menu</footer>
+    </article>
+  </section>
+</main>
+<script>
+(() => {
+ 'use strict';
+ const ids=['name','cuisine','description','phone','address','hours'];let theme='rustic';
+ const el=id=>document.getElementById(id);
+ function data(){return Object.fromEntries(ids.map(id=>[id,el(id).value.trim()]));}
+ function update(){const d=data();for(const [src,dst] of [['name','displayname'],['cuisine','displaycuisine'],['description','displaydescription'],['phone','displayphone'],['address','displayaddress'],['hours','displayhours']])el(dst).textContent=d[src]||'—';el('navname').textContent=d.name.toUpperCase()||'RESTAURANT';el('maps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.address);el('phoneLink').href='tel:'+d.phone.replace(/[^\d+]/g,'');document.title=(d.name||'Restaurant')+' | Private Demo';}
+ ids.forEach(id=>el(id).addEventListener('input',update));
+ document.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>{theme=b.dataset.choice;el('site').dataset.theme=theme;document.querySelectorAll('[data-choice]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));}));
+ el('download').addEventListener('click',()=>{const payload={version:1,theme,...data()};const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='restaurant-settings.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+ update();
+})();
+</script>
+</body>
+</html>
